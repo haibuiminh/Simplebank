@@ -43,3 +43,8 @@ go get github.com/stretchr/testify
 6. 
 * To execute test we using golang postgres driver
 * Using testify to support run Unit test
+7. Implement database transactions in Golang? What is ACID of database transactions.
+* Atomicity (A): Either all operations complete successfully or the transaction fails and the db is unchanged
+* Consistency (C): The db state must be valid after the transaction. All constraint must be satisfied.
+* Isolation (I): Concurrent transaction must not affect each other.
+* Durability (D): Data written by a successfully transaction must be recorded in persistent storage 
