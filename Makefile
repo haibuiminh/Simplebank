@@ -19,4 +19,7 @@ sqlc:
 install: 
 	go mod tidy
 
-PHONY: postgres createdb dropdb migration migrateup migratedown sqlc install
+test:
+	go test -v -cover ./...
+
+PHONY: postgres createdb dropdb migration migrateup migratedown sqlc install test

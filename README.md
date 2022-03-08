@@ -13,6 +13,14 @@ brew install sqlc
 ```
 sqlc init
 ```
+5. To execute test we using golang postgres driver
+```
+go get github.com/lib/pq
+```
+6. testify 
+```
+go get github.com/stretchr/testify
+```
 # DB 
 1. Using postgresql
 2. Using SQLC
@@ -26,10 +34,12 @@ sqlc init
 * Run slowly on high load
 4. Why we don't use SQLX?
 * Quite fast & easy to use
-* Fields mapping via query text & struct tags
-* Falure won't occur until runtime
+* Fields mapping via query text & structure tags
+* Failure won't occur until runtime
 5. Why we don't use database/sql?
 * Very fast & straightforward
 * Manual mapping SQL fields to variables
 * Easy to make mistakes, not caught until runtime
-
+6. 
+* To execute test we using golang postgres driver
+* Using testify to support run Unit test
