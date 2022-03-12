@@ -48,3 +48,18 @@ go get github.com/stretchr/testify
 * Consistency (C): The db state must be valid after the transaction. All constraint must be satisfied.
 * Isolation (I): Concurrent transaction must not affect each other.
 * Durability (D): Data written by a successfully transaction must be recorded in persistent storage 
+
+8. Isolation (I) Read Phenomena
+* Dirty Read: A transaction reads data written by other concurrent uncommitted transaction
+* Non-repeatable read: A transaction reads the same row twice and sees different value because it has been modified by other committed transaction 
+* Phantom read: A transaction re-executes a query to find rows that satisfy a condition and sees different set of rows, due to changes by other committed transaction
+* Serialization Anomaly: The result of a group of concurrent committed transactions is impossible to achieve if we try to run them sequentially in any order without overlapping 
+
+9. 4 Standard Isolation Levels
+* Low 
+* ---> 1. Read Uncommitted (Can see data written by uncommitted transaction)
+* ---> 2. Read Committed (Only see data written by committed transaction) 
+* ---> 3. Repeatable Read (Same read query always return same result) 
+* ---> 4. Serializable (Can achieves same result if execute transactions serially in some order instead of concurrent) 
+5. ---> High
+
