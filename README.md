@@ -67,4 +67,12 @@ go get github.com/stretchr/testify
 ```
 go get -u github.com/gin-gonic/gin
 ```
+11. Load config from file & environment variables in Golang with Viper
+* Find, load, unmarshal config file: JSON, TOML, YAML, ENV, INI
+* Read config from environment variables or flags: override existing values, set default values 
+* Read config from remote system: Etcd, Consul
+* Live watching and writing config file: Reread changed file, save any modifications
+```
+go get github.com/spf13/viper
+```
 
