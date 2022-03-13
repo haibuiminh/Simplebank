@@ -22,4 +22,7 @@ install:
 test:
 	go test -v -cover ./...
 
-PHONY: postgres createdb dropdb migration migrateup migratedown sqlc install test
+server:
+	go run main.go
+
+PHONY: postgres createdb dropdb migration migrateup migratedown sqlc install test sever

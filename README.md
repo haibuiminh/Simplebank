@@ -61,5 +61,10 @@ go get github.com/stretchr/testify
 * ---> 2. Read Committed (Only see data written by committed transaction) 
 * ---> 3. Repeatable Read (Same read query always return same result) 
 * ---> 4. Serializable (Can achieves same result if execute transactions serially in some order instead of concurrent) 
-5. ---> High
+* ---> High
+
+10. Implement RESTful HTTP API using go gin
+```
+go get -u github.com/gin-gonic/gin
+```
 
