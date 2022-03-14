@@ -19,10 +19,13 @@ sqlc:
 install: 
 	go mod tidy
 
+mock:
+	mockgen -package mockdb -destination db/mock/store.go github.com/haibuiminh/Simplebank/db/sqlc Store
+
 test:
 	go test -v -cover ./...
 
 server:
 	go run main.go
 
-PHONY: postgres createdb dropdb migration migrateup migratedown sqlc install test sever
+PHONY: postgres createdb dropdb migration migrateup migratedown sqlc install test sever mock

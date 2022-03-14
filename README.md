@@ -75,4 +75,17 @@ go get -u github.com/gin-gonic/gin
 ```
 go get github.com/spf13/viper
 ```
+12. Mock DB for testing HTTP API in go and achieve 100% coverage: Why mock database?
+* Independent tests: Isolate tests data to avoid conflicts
+* Faster tests: Reduce a lot of time talking to the database
+* 100% coverage: Easily setup edge case unexpected errors
+
+*** How to mock? ***
+* Use fake db: memory: implement a fake version of db is store data in memory
+* Better way is use DB Stubs - GOMOCK: Generate and build stubs that returns hard-coded values
+```
+go install github.com/golang/mock/mockgen@v1.6.0
+
+go get github.com/golang/mock/mockgen/model
+```
 
