@@ -88,4 +88,7 @@ go install github.com/golang/mock/mockgen@v1.6.0
 
 go get github.com/golang/mock/mockgen/model
 ```
-
+13. Securely store password
+```
+password -----> using Bcrypt hash (cost, salt) ----> cost, salt to store in database ----
+```
